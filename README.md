@@ -14,3 +14,18 @@ The code that executes the tests are in the files under features/step_definition
 
 The executable code hits the page itself in features/support/pages. This is the essence of the Page Object design pattern. We define each element one time per page, then update our locators for our pages as necessary. The executable code in the steps files rarely changes.
 
+A successful run of the tests should look like this: 
+
+$ bundle exec cucumber features/
+Feature: Basic google search
+
+  Background:                              # features/google_search.feature:3
+    Given I navigate to Google Search page # features/step_definitions/navigation_steps.rb:1
+
+  Scenario: Normal Search                            # features/google_search.feature:6
+    When I search for "Chris McMahon"                # features/step_definitions/google_search_steps.rb:1
+    Then I should see "Chris McMahon" in the results # features/step_definitions/google_search_steps.rb:10
+
+  Scenario: Failed Search                  # features/google_search.feature:10
+    When I search for "sdlfjlasjsd;flhadf" # features/step_definitions/google_search_steps.rb:1
+    Then I should see no results           # features/step_definitions/google_search_steps.rb:14
