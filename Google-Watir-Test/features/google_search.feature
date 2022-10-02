@@ -1,4 +1,4 @@
-Feature: Downshift Controls on Netlify
+Feature: Basic google search
 
   Background:
     Given I navigate to Google Search page
