@@ -7,7 +7,7 @@ When('I search for {string}') do |search_value|
   end
 end
 
-Then('I should see {string} in the results"') do |search_result|
+Then('I should see {string} in the results') do |search_result|
   expect(on(GoogleSearchPage).results).to match search_result
 end
 

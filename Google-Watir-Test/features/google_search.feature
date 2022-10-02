@@ -5,7 +5,7 @@ Feature: Basic google search
 
   Scenario: Normal Search
     When I search for "Chris McMahon"
-    Then I should see "Chris McMahon" in the results"
+    Then I should see "Chris McMahon" in the results
 
   Scenario: Failed Search
     When I search for "sdlfjlasjsd;flhadf"
