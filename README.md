@@ -16,6 +16,9 @@ The executable code hits the page itself in features/support/pages. This is the 
 
 A successful run of the tests should look like this: 
 
+Screen Shot 2022-10-02 at 3.07.34 PM.png<img width="826" alt="image" src="https://user-images.githubusercontent.com/204643/193476372-7b64e32e-3b06-4e57-a403-52c8424ae77b.png">
+
+
 $ bundle exec cucumber features/
 Feature: Basic google search
 
